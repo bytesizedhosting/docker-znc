@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+umask 0002
+
+echo "Starting ZNC"
+exec s6-setuidgid bytesized znc --foreground --datadir=/config
